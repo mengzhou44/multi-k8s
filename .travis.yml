@@ -9,12 +9,12 @@ scripts:
   - docker run mengzhou44/react-test  npm run test -- --coverage
 
 after_success:
-  - docker build -t mengzhou44/mulit-client  ./client
-  - docker build -t mengzhou44/mulit-nginx   ./nginx
-  - docker build -t mengzhou44/mulit-server  ./server
-  - docker build -t mengzhou44/mulit-worker  ./worker
+  - docker build -t mengzhou44/multi-client  ./client
+  - docker build -t mengzhou44/multi-nginx   ./nginx
+  - docker build -t mengzhou44/multi-server  ./server
+  - docker build -t mengzhou44/multi-worker  ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u  "$DOCKER_ID" --password-stdin
-  - docker push mengzhou44/mulit-client
-  - docker push mengzhou44/mulit-nginx
-  - docker push mengzhou44/mulit-server
-  - docker push mengzhou44/mulit-worker
+  - docker push mengzhou44/multi-client
+  - docker push mengzhou44/multi-nginx
+  - docker push mengzhou44/multi-server
+  - docker push mengzhou44/multi-worker
