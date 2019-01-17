@@ -2,12 +2,6 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t mengzhou44/react-test -f ./client/Dockerfile.dev ./client
-
-scripts:
-  - docker run mengzhou44/react-test  npm run test -- --coverage
-
 after_success:
   - docker build -t mengzhou44/multi-client  ./client
   - docker build -t mengzhou44/multi-nginx   ./nginx
