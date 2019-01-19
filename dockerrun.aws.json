@@ -12,7 +12,7 @@
             "name": "worker",
             "image": "mengzhou44/multi-worker",
             "essential": false,
-            "memory": 128
+            "memory": 127
         },
         {
             "name": "server",
