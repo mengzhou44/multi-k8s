@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './other-page';
 import Fib from './fib';
 
@@ -11,18 +11,22 @@ class App extends Component {
   render() {
     return (
       <Router>
-           <div>
+        <div>
 
           <div className="App">
-             <Link to='/fib'>Home</Link>
+            <div className="App">
+              Fib Calculator Version 2
+             </div>
+            <Link to='/fib'>Home</Link>
+            &Nbsp;
              <Link to='/otherpage'>Other Page</Link>
-           </div>
-           <div>
-             <Route exact  path='/fib' component={Fib} />
-             <Route exact  path='/otherpage' component={OtherPage} />
-           </div>
-           </div>
-      </Router>  
+          </div>
+          <div>
+            <Route exact path='/fib' component={Fib} />
+            <Route exact path='/otherpage' component={OtherPage} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }
