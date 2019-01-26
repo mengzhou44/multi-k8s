@@ -16,12 +16,9 @@ before_install:
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u  "$DOCKER_ID" --password-stdin
   - docker build -t mengzhou44/react-test -f ./client/Dockerfile.dev ./client
- 
+
 script:
   - docker run mengzhou44/react-test npm run test -- --coverage
-
-after_success:
-
 
 deploy:
   provider: script
