@@ -15,7 +15,7 @@ class App extends Component {
 
           <div className="App">
             <div className="App">
-              Fib Calculator Version 2
+              Fib Calculator Version Kubernete
              </div>
             <Link to='/fib'>Home</Link>
             &Nbsp;
